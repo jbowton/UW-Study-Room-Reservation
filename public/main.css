@@ -1,0 +1,462 @@
+/*
+  Name: Jadon Bowton
+  Date: 6/4/2023
+  Section: CSE 154 AC
+
+  This is the CSS file for Quiet Quarters landing page. After a user logs in
+  this is the CSS file that will control the styling for the actual content of
+  the website. The theme follows the colors of UW including different purples,
+  golds, grays, blacks, whites, and pinks.
+*/
+
+body {
+  height: 100%;
+  font-family: 'Comme', sans-serif;
+  overflow: auto;
+}
+
+body, h1 {
+  color: #4e1c6c;
+}
+
+body, ol, #reserve .container p, .error, .succes, .bigger p {
+  padding: 0;
+}
+
+body, p, .long, .ling, #filter #compact {
+  margin: 0;
+}
+
+body, main, #img-slider {
+  position: relative;
+}
+
+header, .bigger {
+  position: fixed;
+}
+
+header {
+  width: calc((100%) - (0px));
+}
+
+body, header {
+  background-color: #4e1d6c;
+}
+
+header, nav {
+  height: 80px;
+  top: 0;
+}
+
+header, #img-slider {
+  z-index: 999;
+}
+
+nav, #underline {
+  position: absolute;
+}
+
+nav,
+.room,
+.middle,
+#filter input,
+#filter button,
+.close,
+#big-pic,
+#info,
+#reserve article > div,
+article > div {
+  width: 100%;
+}
+
+ol {
+  justify-content: space-around;
+  list-style-type: none;
+  height: calc((100%) - (30px));
+  margin: 15px 0 15px 0;
+}
+
+ol,
+#top,
+main,
+.img-section,
+#img-slider,
+.room,
+.long,
+.compact,
+#reserve > article > section,
+#reserve .container,
+.boxes,
+#info > div,
+#reserve-panel > div > div,
+.bigger,
+#exit,
+h1,
+#reserve article > div,
+article > div,
+#history article,
+[type='text'],
+[type='time'],
+.room div,
+main > article div {
+  display: flex;
+}
+
+ol,
+#top,
+.reverse,
+.long,
+#info > div,
+.bigger,
+[type='text'],
+[type='time'],
+.boxes,
+#reserve .container {
+  align-items: center;
+}
+
+li {
+  font-size: 16px;
+  width: 80px;
+  text-align: center;
+}
+
+li, #reserve button {
+  color: white;
+}
+
+li, #top {
+  text-transform: uppercase;
+}
+
+li:hover,
+#time,
+#reserve-time,
+#account button:hover,
+#reserve button:hover,
+.icon,
+#filter button:hover {
+  cursor: pointer;
+}
+
+li:hover, .active {
+  color: #ffc496;
+}
+
+#top {
+  top: 80px;
+  padding: 10px;
+}
+
+#top, .room {
+  border-bottom-style: solid;
+  border-bottom-color: #929292;
+  border-bottom-width: 1.5px;
+}
+
+#top, main, #main p {
+  background-color: #caaeff;
+}
+
+#top, [type='text'], [type='time'], .boxes, .right .container {
+  justify-content: center;
+}
+
+#top, main, .long, .right .container, #info, .bigger {
+  flex-direction: column;
+}
+
+#top, #reserve .container p {
+  color: black;
+}
+
+main {
+  margin-top: 80px;
+  min-height: calc((100vh) - (100px));
+  justify-content: flex-start;
+  border: #4e1d6c;
+  border-width: 20px;
+  border-top-width: 0;
+}
+
+main, #underline {
+  z-index: 0;
+}
+
+main, .line {
+  border-style: solid;
+}
+
+.img-section {
+  flex-wrap: nowrap;
+  width: 1350px;
+}
+
+.img-section, .line {
+  z-index: -1;
+}
+
+#img-slider {
+  overflow: hidden;
+}
+
+.img-section, .img-section img {
+  height: 450px;
+}
+
+.img-section img {
+  width: 450px;
+}
+
+@keyframes travel {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+p {
+  color: #4e1d6c;
+}
+
+p, .bigger {
+  padding: 20px;
+}
+
+p, #account button, #account, label {
+  font-size: 18px;
+}
+
+#underline {
+  display: block;
+  bottom: 0;
+  width: calc((100%) / 4);
+  transition: transform 0.5s ease-in-out;
+  background: #ffc496;
+  border-radius: 0.1em;
+  height: calc(0.6em / 2);
+}
+
+#underline, .bigger {
+  left: 0;
+}
+
+.room {
+  background-color: #ffffff;
+}
+
+.room, .left, .right, .left .container, .boxes, #history article {
+  flex-direction: row;
+}
+
+.room, .boxes, .room-pic {
+  height: 100px;
+}
+
+.long {
+  border-radius: 20px;
+  background-color: #9e9e9e;
+}
+
+.long, #account button {
+  width: 150px;
+}
+
+.reverse {
+  flex-direction: column-reverse;
+}
+
+.compact {
+  gap: 10px;
+}
+
+.compact, #reserve .container, #reserve button {
+  padding: 5px;
+}
+
+#reserve .container p, .bigger p, .error, .succes {
+  font-size: 14px;
+}
+
+.left {
+  align-items: flex-start;
+}
+
+.left .container {
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.left .container,
+.right .container,
+.room div,
+main > article div,
+#buttons,
+#reserve article > div:not(#room-reference, #filter, #exit, .close) {
+  gap: 5px;
+}
+
+.container img, .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.box:last-child {
+  border-right: black;
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+
+.box {
+  width: calc(calc((100%) - (100px)) / (12));
+  height: 50px;
+  border-left: black;
+  border-left-width: 1px;
+  border-left-style: solid;
+  z-index: -2;
+}
+
+.line {
+  transform: translateX(calc((calc((calc((100%) - (104px))) / (-3))) * (0)));
+  border: #d8270c;
+  background-color: white;
+  border-width: 0px;
+  height: 60px;
+  width: 2px;
+}
+
+.circle {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
+.open {
+  background-color: #42a20e;
+}
+
+.bigger #info .green {
+  color: #5aff00;
+}
+
+.reserved {
+  background-color: #fa5a41;
+}
+
+.bigger #info .red {
+  color: #ff0000;
+}
+
+.room-pic {
+  aspect-ratio: 1/1;
+}
+
+#reserve button {
+  width: 100px;
+  background-color: #4f1f74;
+}
+
+#reserve button, #account button {
+  border-width: 0;
+}
+
+#reserve button, #account button, #filter input, #filter button {
+  border-radius: 5px;
+}
+
+#filter #compact {
+  width: fit-content;
+}
+
+#top p {
+  padding: 5px 0 5px 0;
+}
+
+[type='text'], [type='time'] {
+  padding: 0px 5px 0 5px;
+  outline-width: 0;
+}
+
+#filter input, #filter button {
+  border: none;
+}
+
+#filter button:hover {
+  background-color: #a6a6a6;
+}
+
+#reserve button:hover {
+  color: #caaeff;
+}
+
+.filter {
+  background-color: #929292;
+}
+
+#exit {
+  width: calc((100%) - (40px));
+  padding: 0 20px 0 20px;
+}
+
+#exit, #buttons, .close {
+  justify-content: flex-end;
+}
+
+#account button {
+  padding: 10px 20px 10px 20px;
+}
+
+#account button, .error {
+  color: red;
+}
+
+#account button:hover {
+  transform: scale(1.1);
+}
+
+.bigger {
+  right: 0;
+  top: 100px;
+  margin: auto;
+  width: 60%;
+  background: #9e9e9e;
+  justify-self: center;
+  color: #4e1c6c;
+}
+
+label {
+  align-self: center;
+}
+
+#reserve article > div:not(#room-reference, #filter, #exit, .close), .room {
+  justify-content: space-between;
+}
+
+#reserve article > div:not(#room-reference, #filter, #exit, .close), .compact {
+  flex-wrap: wrap;
+}
+
+#reserve-panel input, [type='text'], [type='time'], #filter #clear, #filter #choose {
+  width: 50%;
+}
+
+#big-pic, #info {
+  max-width: 500px;
+  object-fit: contain;
+}
+
+#loading {
+  mix-blend-mode: color-burn;
+}
+
+.success {
+  color: green;
+}
+
+.hide {
+  display: none;
+}

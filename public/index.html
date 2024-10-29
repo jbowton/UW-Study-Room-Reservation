@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+  Name: Jadon Bowton
+  Date: 6/4/2023
+  Section: CSE 154 AC
+
+  This is the HTML file that controls the structure of the login home page,
+  the login section and the create new user section.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comme&family=Konkhmer+Sleokchher&family=Prata&display=swap">
+  <title>Document</title>
+</head>
+<body>
+<header>
+  <nav>
+    <ol>
+      <li id="home">Home</li>
+      <li id="login">Login</li>
+    </ol>
+  </nav>aw
+</header>
+<main>
+  <section id="home-page">
+    <article>
+      <h1>
+        Quiet Quarters
+      </h1>
+      <h2>
+        Your key to success is just a reservation away
+      </h2>
+    </article>
+    <article>
+      <p>
+        Looking for a quiet study space near you? Look no further
+        than our study room reservation website, where you can easily
+        search for and book available study rooms at nearby libraries
+        to help you stay on track and focused on your academic success!
+      </p>
+    </article>
+  </section>
+  <!--
+    All icons from https://icons8.com and free to use.
+    Lock icon, email icon, arrow icon.
+  -->
+  <form id="login-page" class="hide">
+    <h2>Sign In</h2>
+    <article>
+      <div>
+        <img src="icons/email.png" alt="email icon">
+        <label for="email">Email (@uw.edu)</label>
+      </div>
+      <input autocomplete="off" type="text" id="email"  name="email" required>
+    </article>
+    <article>
+      <div>
+        <img src="icons/lock.png" alt="lock icon">
+        <label for="password">Password</label>
+      </div>
+      <input autocomplete="off" type="password" id="password"  name="password" required>
+    </article>
+    <p id="sign-error" class="error"></p>
+    <article>
+      <p id="new">New User?</p>
+      <button type="submit" id="login-continue">
+        Continue
+        <img src="icons/arrow.png" alt="arrow icon">
+      </button>
+    </article>
+  </form>
+  <form id="create-page" class="hide">
+    <h2>Create Account</h2>
+    <article>
+      <div>
+        <label for="name">Name</label>
+      </div>
+      <input autocomplete="off" type="text" id="name"  name="name" required>
+    </article>
+    <article>
+      <div>
+        <img src="icons/email.png" alt="email icon">
+        <label for="email">Email (@uw.edu)</label>
+      </div>
+      <input autocomplete="off" type="text" id="create-email"  name="email" required>
+    </article>
+    <article>
+      <div>
+        <img src="icons/lock.png" alt="lock icon">
+        <label for="password">Password</label>
+      </div>
+      <input autocomplete="off" type="password" id="create-password"  name="password" required>
+    </article>
+    <p id="create-error" class="error"></p>
+    <article>
+      <p id="back">Back to login</p>
+      <button type="submit" id="back-to">
+        Login
+        <img src="icons/arrow.png" alt="arrow icon">
+      </button>
+    </article>
+  </form>
+</main>
+</body>
+</html>

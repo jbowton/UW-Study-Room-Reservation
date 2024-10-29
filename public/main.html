@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--
+  Name: Jadon Bowton
+  Date: 6/4/2023
+  Section: CSE 154 AC
+
+  This is the HTML file that controls the structure of the actual website including
+  the landing home page, the reservation page, user history page, and user account
+  page.
+-->
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comme&family=Konkhmer+Sleokchher&family=Prata&display=swap">
+  <title>Quiet Quarters</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div id="underline"></div>
+      <ol>
+        <li value="0" class="active">Home</li>
+        <li value="1">Reserve</li>
+        <li value="2">History</li>
+        <li value="3">Account</li>
+      </ol>
+    </nav>
+  </header>
+  <main>
+    <article id="top">
+      <p></p>
+      <div id="filter" class="hide">
+        <button id="avail-filter">Natural Lighting</button>
+        <input id="time" type="time">
+        <input id="filter-date" type="date">
+        <button id="choose">Time Search</button>
+        <button id="clear">Clear</button>
+        <input id="search-bar" type="text" placeholder="Search..">
+        <input type="checkbox" id="compact" name="grid" value="compact">
+        <label for="compact">Compact</label>
+      </div>
+      <p id="filter-error" class="hide error">Error</p>
+    </article>
+    <section id="home" class="active">
+      <section id="img-slider">
+        <article class="img-section">
+          <img src="img/founders.png" alt="founders hall">
+          <img src="img/paccar.png" alt="Paccar hall">
+          <img src="img/suzallo.png" alt="Suzallo">
+        </article>
+        <article class="img-section">
+          <img src="img/founders.png" alt="founders hall">
+          <img src="img/paccar.png" alt="Paccar hall">
+          <img src="img/suzallo.png" alt="Suzallo">
+        </article>
+      </section>
+      <section id="description-section">
+        <p id="main-p">
+          Our study room reservation website streamlines the process
+          of finding and reserving study spaces at nearby libraries.
+          Users can search for available study rooms, view details
+          about each room (such as capacity and amenities), and conveniently
+          book their preferred study space for a specific date and time.
+          The website may also provide photos and user reviews to help users
+          make informed decisions. With a user account, individuals can save
+          their preferences, manage their bookings, and receive notifications
+          about upcoming reservations. The goal is to provide a user-friendly
+          platform that simplifies the task of finding and reserving a quiet
+          study environment, ultimately supporting users in their academic
+          pursuits.
+        </p>
+      </section>
+    </section>
+    <!--
+      All icons from https://icons8.com.
+      This includes common room, team room, and individual room icons:
+      https://icons8.com/icon/set/people/material
+      https://icons8.com/icons/set/close
+      https://icons8.com/icons/set/all
+      All library photo images from this link below
+      https://scout.uw.edu/seattle/study/?building0=Odegaard%
+      20Undergraduate%20Library%20(OUGL)&type0=study_room&all_published=true
+    -->
+    <section id="reserve" class="hide">
+      <article id="preview" class="bigger hide">
+        <div class="close">
+          <img class="exe icon" src="icons/close.svg" alt="close icon">
+        </div>
+        <img src="img/404.png" id="big-pic" alt="Room View Big">
+        <div id="info">
+          <p id="status"></p>
+          <div>
+            <p id="capacity"></p>
+            <img src="icons/capacity.png" alt="capacity icon">
+          </div>
+          <p id="description"></p>
+        </div>
+        <p id="preview-error"></p>
+      </article>
+      <article id="reserve-panel" class="bigger hide">
+        <div class="close">
+          <img class="exe icon" src="icons/close.svg" alt="close icon">
+        </div>
+        <div id="room-reference">
+          <h1 id="title">Reserve Room#</h1>
+          <h1 class="room-num"></h1>
+        </div>
+        <p class="error" id="confirm-error"></p>
+        <img src="icons/loading.gif" alt="loading" class="hide" id="loading">
+        <div>
+          <div>
+            <label for="start-time">Start: </label>
+            <input id="start-time" type="time">
+            <label for="end-time">End: </label>
+            <input id="end-time" type="time">
+            <input type="date" id="date">
+            <p id="confirmed"></p>
+          </div>
+          <div id="buttons">
+            <button id="confirm">Confirm</button>
+            <button id="submit" disabled>Submit</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="history" class="hide">
+    </section>
+    <section id="account" class="hide">
+      <article>
+        <div>
+          <p id="user-name"></p>
+        </div>
+        <hr>
+        <div>
+          <p id="user-email"></p>
+        </div>
+        <hr>
+        <div>
+          <p id="user-reserves"></p>
+        </div>
+        <hr>
+        <div id="exit">
+          <button id="sign-out">Sign Out</button>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

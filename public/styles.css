@@ -1,0 +1,233 @@
+/*
+  Name: Jadon Bowton
+  Date: 6/4/2023
+  Section: CSE 154 AC
+
+  This is the CSS file for Quiet Quarters login page and create new user page.
+  This controls the styling for the first page a user will see relating to quiet
+  quarters. The theme follows the colors of UW including different purples,
+  whites, grays, and pinks.
+*/
+
+body {
+  background-image: url('background/gradient.jpg');
+  background-color: #4e1d6c;
+  background-size: cover;
+  height: 100vh;
+}
+
+body, ol, h2 {
+  margin: 0;
+}
+
+body, button, input::placeholder, [type="text"], [type="password"] {
+  color: white;
+}
+
+header {
+  position: fixed;
+  z-index: 999;
+}
+
+header, nav, label, button, input {
+  width: 100%;
+}
+
+nav {
+  height: 80px;
+  padding: 15px 0 15px 0;
+}
+
+ol, main, section, form, form article, div, button {
+  display: flex;
+}
+
+ol {
+  list-style-type: none;
+  justify-content: space-between;
+  padding: 0 60px 0 60px;
+  width: calc((100%) - (120px));
+  height: 100%;
+}
+
+.error, [type="text"], [type="password"] {
+  padding: 0;
+}
+
+ol, form, a, main, div, button {
+  align-items: center;
+}
+
+li, h1 {
+  font-family: 'Konkhmer Sleokchher', cursive;
+}
+
+li {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+li:hover, a:hover, form #new:hover, form #back:hover {
+  color: #caaeff;
+}
+
+li:hover, form button:hover, form #new, form #back {
+  cursor: pointer;
+}
+
+main, form {
+  padding: 20px;
+}
+
+main, div, button {
+  justify-content: center;
+}
+
+main {
+  height: calc((100%) - (120px));
+  padding: 60px;
+}
+
+main > section, main > form, form article {
+  flex-direction: column;
+}
+
+main > section {
+  justify-content: space-evenly;
+}
+
+h1, #home-page h2, #home-page p, form {
+  animation: fadeInDown;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 70px;
+  margin: 0 0 40px 0;
+  animation-duration: 1s;
+  text-shadow: #7136db 6px 0px 0px;
+}
+
+h1, #home-page h2 {
+  line-height: 1em;
+}
+
+article p, h2, a, label, button, .error {
+  font-family: 'Comme', sans-serif;
+}
+
+#home-page h2 {
+  font-size: 50px;
+}
+
+#home-page h2, form {
+  animation-duration: 2s;
+}
+
+#home-page p {
+  font-size: 28px;
+  margin-bottom: 0;
+  animation-duration: 3s;
+}
+
+form {
+  width: 50%;
+  max-width: 330px;
+  backdrop-filter: blur(25px);
+  border: #ababab4a solid 2px;
+  box-shadow: inset #9e9e9e4a 0 0 20px 0px;
+  border-radius: 10px;
+  background: inherit;
+  position: absolute;
+  overflow: hidden;
+}
+
+form article, form h2 {
+  width: calc((100%) - (40px));
+  margin: 20px;
+}
+
+form article {
+  align-items: flex-start;
+}
+
+form h2 {
+  text-align: start;
+}
+
+label, input, [type="text"], [type="password"], .error {
+  font-size: 16px;
+}
+
+form p, button {
+  font-size: 18px;
+}
+
+button {
+  border-width: 0;
+  padding: 10px 15px 10px 15px;
+  border-radius: 2px;
+  background: #4f1f74;
+}
+
+input:hover {
+  cursor: text;
+}
+
+div {
+  transition: all 0.5s ease;
+}
+
+div, button {
+  gap: 5px;
+}
+
+form img {
+  height: 20px;
+  aspect-ratio: 1 / 1;
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  border-style: solid;
+  border: none;
+  border-bottom: 3px solid #caaeff;
+  background: transparent;
+  z-index: 900;
+  caret-color: white;
+}
+
+.error {
+  text-decoration: none;
+  color: #ff3737;
+  margin: 0 20px 20px 20px;
+  cursor: auto;
+}
+
+form #new, form #back {
+  text-decoration: underline;
+  padding-bottom: 20px;
+}
+
+[type="text"], [type="password"] {
+  padding-bottom: 5px;
+  background-color: transparent;
+}
+
+.hide {
+  display: none;
+}
