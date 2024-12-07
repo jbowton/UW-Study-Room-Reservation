@@ -1,5 +1,5 @@
 <!--
-  Name: Dean Shaw & Jadon Bowton
+  Name: Jadon Bowton
   Date: 6/5/2023
   Section: CSE 154 AC
 
@@ -83,15 +83,15 @@ returns information for that specific room to display additional information.
 **Description:** Checks a valid login from a user and ensures that the user exists
 and the password and email match.
 
-**Example Request:** /library/login with POST parameters `email=dshaw16@uw.edu` and `key=dtest`
+**Example Request:** /library/login with POST parameters `email=jbowton@uw.edu` and `key=dtest`
 
 **Example Response:**
 
 ```JSON
 {
     "id": "1",
-    "name": "dean",
-    "username": "dshaw16@uw.edu"
+    "name": "jadon",
+    "username": "jbowton@uw.edu"
 }
 ```
 **Error Handling:**
