@@ -1,5 +1,5 @@
 /**
- * Name: Dean Shaw & Jadon Bowton
+ * Name: Jadon Bowton
  * Date: 6/4/2023
  * Section: CSE 154 AC
  *
@@ -17,11 +17,14 @@ const app = express();
 const multer = require('multer');
 const sqlite3 = require('sqlite3');
 const sqlite = require('sqlite');
+const cors = require('cors');
 const SERVER_CODE = 500;
 const CLIENT_CODE = 400;
 const CLIENT_ERROR = 'Missing one or more parameters';
 const SERVER_ERROR = 'Something went wrong. Please try again later';
 let loggedIn;
+
+app.use(cors());
 
 // for application/x-www-form-urlencoded
 app.use(express.urlencoded({extended: true}));
@@ -383,13 +386,20 @@ function getAllResQuery() {
  * @returns {sqlite3.Database} - The data base to make updates and queries on
  */
 async function getDBConnection() {
-  const db = await sqlite.open({
-    filename: 'library.db',
-    driver: sqlite3.Database
-  });
-  return db;
+  try {
+    const db = await sqlite.open({
+      filename: 'library.db',
+      driver: sqlite3.Database
+    });
+    return db;
+  } catch (err) {
+    console.error('Failed to connect to the database:', err);
+    throw err;
+  }
 }
 
 app.use(express.static('public'));
 const PORT = process.env.PORT || 8000;
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
